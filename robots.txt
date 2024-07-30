@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: _db_backups
+Disallow: aspnet_client
+Disallow: css
+Disallow: images
+Disallow: Library
+Disallow: dev4
+
+
+                                                                                                                           

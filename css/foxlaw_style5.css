@@ -1,0 +1,306 @@
+@charset "utf-8";
+body {
+	font: 100% Georgia, "Times New Roman", Times, serif;
+	background: #fff;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+
+/* Tips for Elastic layouts 
+1. Since the elastic layouts overall sizing is based on the user's default fonts size, they are more unpredictable. Used correctly, they are also more accessible for those that need larger fonts size since the line length remains proportionate.
+2. Sizing of divs in this layout are based on the 100% font size in the body element. If you decrease the text size overall by using a font-size: 80% on the body element or the #container, remember that the entire layout will downsize proportionately. You may want to increase the widths of the various divs to compensate for this.
+3. If font sizing is changed in differing amounts on each div instead of on the overall design (ie: #sidebar1 is given a 70% font size and #mainContent is given an 85% font size), this will proportionately change each of the divs overall size. You may want to adjust based on your final font sizing.
+*/
+#content_body {
+	position:relative;
+	background: #fff url(../images/sand_dollar0.5.jpg) right bottom no-repeat scroll;
+	float:left;
+	width:100%;
+	margin-bottom:10px;
+}
+#container {
+	background:url(../images/white_50.png);
+	width: 800px;  /* this width will create a container that will fit in an 800px browser window if text is left at browser default font sizes */
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border-top: 0px solid #ff0000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+	padding-bottom:35px;
+}
+#header_row1 {
+	background:#333;
+	color:#fff;
+	font-size:80%;
+	padding:2px 20px;
+	text-align:left;
+	overflow:auto;
+}
+#header_row1 h1 {
+	float:left;
+	width:auto;
+	font-size:80%;
+}
+#social_icons {
+	width: 660px;
+	margin:5px auto;
+	overflow:auto;
+}
+#social_icons img, #social_icons a {
+	display:block;
+	float:right;
+	width:16px;
+	height:16px;
+}
+#social_icons.dark img, #social_icons.dark a {
+	display:block;
+	float:right;
+	width:32px;
+	height:32px;
+}
+#social_icons #facebook_icon_link {
+	background:url(../images/icon_facebook.png) no-repeat;
+}
+#social_icons #twitter_icon_link {
+	background:url(../images/icon_twitter_bird.png) no-repeat;
+}
+#social_icons #google_icon_link {
+	background:url(../images/icon_google.png) no-repeat;
+}
+#social_icons #feed_icon_link {
+	background:url(../images/icon_feed.png) no-repeat;
+}
+#social_icons.dark #facebook_icon_link {
+	background:url(../images/facebook_dark_combo.png) no-repeat;
+}
+#social_icons.dark #twitter_icon_link {
+	background:url(../images/twitter_dark_combo.png) no-repeat;
+}
+#social_icons.dark #google_icon_link {
+	background:url(../images/google_dark_combo.png) no-repeat;
+}
+#social_icons.dark #feed_icon_link {
+	background:url(../images/rss_dark_combo.png) no-repeat;
+}
+#social_icons.dark #facebook_icon_link:hover,
+#social_icons.dark #twitter_icon_link:hover,
+#social_icons.dark #google_icon_link:hover, 
+#social_icons.dark #feed_icon_link:hover {
+	background-position:0 -32px;
+}
+
+#header_row2 {
+	background:#999 url(../images/gray_grad_15.jpg) repeat-x;
+	color:#003366;
+	font-size:80%;
+	height:20px;
+}
+#header_row4 {
+	background:#ddd url(../images/gray_grad2.jpg) repeat-x;
+	height:35px;
+	padding-left:40px;
+	border-bottom:1px solid #666;
+}
+#navWrapper {
+	width: 900px;
+	margin:0 auto;
+	text-align:left;
+}
+#navWrapper img {
+	cursor:pointer;
+	float:left;
+	width:auto;
+}
+#top_nav {
+	width: 800px;
+	margin: 0 auto;
+	text-align:right;
+	padding:0 20px;
+}
+#logo {
+	/*
+	position:absolute;
+	top:20px;
+	left:50%;
+	margin-left:-400px
+	*/
+	float:left;
+	background:url(../images/fox_law_copperplate_starburst.jpg) no-repeat;
+	width:250px;
+	height:250px;
+	margin-left: 50px;
+}
+#big_header { 
+	background: #fff url(../images/blue_grad_250.jpg) repeat-x; 
+	height:250px;
+} 
+#big_header_content {
+	position:relative;
+	background: #fff url(../images/blue_grad_250.jpg) repeat-x; 
+	height:250px;
+	width: 860px;
+	margin:0 auto;
+}
+#slideshow {
+    position:relative;
+	background:url(../images/fox_law_photos_900_back.jpg) left top no-repeat;
+	width:900px;
+    height:250px;
+	float:right;
+}
+
+#slideshow IMG {
+    position:absolute;
+    top:0;
+    right:0;
+    z-index:8;
+    opacity:0.0;
+	width:550px;
+    height:250px;
+}
+#slideshow IMG.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow IMG.last-active {
+    z-index:9;
+}
+#mainContent {
+	padding: 0 20px 10px 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+	line-height:25px;
+	font-size:90%;
+}
+#mainContent h2 {
+	font-size:110%;
+	margin-bottom:0;
+}
+#mainContent h3 {
+	font-size:100%;
+	color:#660000;
+	margin-top:0;
+}
+#mainContent h4 {
+	font-size:100%;
+	color:#333366;
+	font-style:italic;
+}
+/*
+#mainContent .testimonials {
+	font-family:"Times New Roman", Times, serif;
+	font-family:"Trebuchet MS", "Times New Roman", Times, serif;
+	font-size:120%;
+	letter-spacing:1px;
+	margin:20px 0;
+	padding:5px 10px;
+}
+*/
+#legend {
+	position:absolute;
+	bottom:20px;
+	right:300px;
+}
+#legend a, #legend a:visited {
+	display:block;
+	font:70% Verdana, Arial, Helvetica, sans-serif;
+	color:#36a4c7;
+	text-decoration:none;
+	background:url(../images/sand-dollar-icon2.png) no-repeat;
+	height:16px;
+	padding-left:19px;
+}
+#legend a:hover {
+	text-decoration:underline;
+}
+#footer { 
+	padding: 0 10px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	/* background:#ddd url(../images/gray_grad2.jpg) left bottom; */
+	background-color:#ddd;
+} 
+#footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+	font-size:80%;
+}
+#banner1 {
+	background: #fff url(../images/margo_banner.jpg) right top no-repeat;
+}
+#banner1 h3 {
+	font-size:100%;
+	color:#666;
+	margin:0;
+	padding:0;
+}
+.horizontalNav {
+	display:block;
+	float:left;
+	height:35px;
+	cursor:pointer;
+	background-position:top left;
+	background-repeat:no-repeat;
+}
+.horizontalNav:hover, .activeHorizontalNav {
+	background-position: bottom left;
+}
+
+#home {
+	background-image:url(../images/home_button_40_combo.jpg);
+	width:80px;
+}
+#family_law {
+	background-image:url(../images/family_law_button_40_combo.jpg);
+	width:149px;
+}
+#collaborative_law {
+	background-image:url(../images/collaborative_law_button_40_combo.jpg);
+	width:260px;
+}
+#mediation {
+	background-image:url(../images/mediation_button_40_combo.jpg);
+	width:139px;
+}
+#testimonials {
+	background-image:url(../images/testimonials_button_40_combo.jpg);
+	width:180px;
+}
+#resources {
+	background-image:url(../images/resources_button_40_combo.jpg);
+	width:157px;
+}
+li.nobullet {
+	list-style-type:none;
+	margin-left:-20px;
+	padding-left:0;
+}
+img.bio {
+	float:right; 
+	width:125px;
+	height:156px;
+	margin:0 0 10px 10px;
+}
+.block {
+	display: block;
+	line-height: 18px;
+}
+.citation {
+	font-style:italic;
+}
+.icon {
+	background-image: url(../images/arrow2.gif); 
+	background-position:0 6px;
+	background-repeat:no-repeat;
+	padding-left:12px;
+	text-decoration:none;
+}
+.icon:hover { text-decoration:underline; }
+.doubleArrow { background-image: url(../images/arrow2.gif); }
+.pdf { background-image: url(../images/pdf.gif); background-position:0 0; padding-left:20px;}
+.shadow {
+-moz-box-shadow: 3px 3px 4px #000;
+-webkit-box-shadow: 3px 3px 4px #000;
+box-shadow: 3px 3px 4px #000;
+/* For IE 8 */
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+/* For IE 5.5 - 7 */
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
